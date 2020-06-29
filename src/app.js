@@ -7,6 +7,8 @@ const request = require('request')
 const forecast = require('./utils/02forecast')
 const geocode = require('./utils/02geocode')
 
+const port = process.env.PORT | 3000
+
 //define paths for express config
 const public_dir_path = path.join(__dirname,'../public')   
 const viewpath = path.join(__dirname,'../template/views') 
@@ -60,7 +62,7 @@ app.get('/help/*',(rew,res)=>{            //SPECIFIC 404 PAGES
  })
 
  //SERVER HOSTING
-app.listen(3000, ()=>{
-    console.log('server is up and running !')
+app.listen(port, ()=>{
+    console.log('server is up and running on the port '+port)
 })
 

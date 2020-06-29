@@ -12,7 +12,7 @@ weatherForm.addEventListener('submit',(event)=>{
     
     messageOne.textContent = "loading...."
 
-    fetch('http://localhost:3000/weather?address='+search.value).then((response) => {
+    fetch('/weather?address='+search.value).then((response) => {
     response.json().then((data)=>{
            if(data.e){
                 messageOne.textContent = "No results found, Make sure that all words are spelled correctly."
