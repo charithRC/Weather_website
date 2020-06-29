@@ -25,13 +25,13 @@ app.use(express.static(public_dir_path))
 
 
 app.get('', (req,res)=>{
-    res.render('index', {title: 'dynamic weather', name:'charith RC'})
+    res.render('index', {title: 'dynamic weather', name:'Charith RC'})
 })
 app.get('/about',(req,res)=>{
-    res.render('about',{title:'about' ,name: 'charith RC'})
+    res.render('about',{title:'about' ,name: 'Charith RC'})
 })
 app.get('/help',(req,res)=>{
-    res.render('help',{title : 'help' ,name : 'charith RC'})
+    res.render('help',{title : 'help' ,name : 'Charith RC'})
 })
 
 app.get('/weather',(req, res)=>{
