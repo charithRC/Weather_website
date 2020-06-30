@@ -3,7 +3,8 @@ const search = document.querySelector('input')
 
 const messageOne = document.querySelector('#messageOne')
 const messageTwo = document.querySelector('#messageTwo')
-
+const messageThree = document.querySelector('#messageThree')
+const messageFour = document.querySelector('#messageFour')
 
 
 weatherForm.addEventListener('submit',(event)=>{
@@ -21,7 +22,9 @@ weatherForm.addEventListener('submit',(event)=>{
            }
            else{
                messageOne.textContent = "place searched="+data.place_searched
-               messageTwo.textContent = "temp = "+data.forecastData.temp+", wind speed="+data.forecastData.windspeed
+               messageTwo.textContent = "Current temperature is "+data.forecastData.temp+"°C, but feels like "+data.forecastData.feels_like+"°C"
+               messageThree.textContent = "humidity is "+data.forecastData.humidity+"%"
+
             console.log("place searched=",data.place_searched)
             console.log("forecast data=",data.forecastData.temp)
            }

@@ -13,7 +13,14 @@ const forecast = (latti,longi,callback)=>{
         else{
             callback(e,{
                 temp :body.main.temp,
-                windspeed :body.wind.speed
+                windspeed :body.wind.speed,
+                feels_like:body.main.feels_like,
+                humidity:body.main.humidity,
+                
+
+                
+                
+
             })
         }
     })
